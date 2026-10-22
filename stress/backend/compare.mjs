@@ -173,9 +173,9 @@ function parseArgs(argv) {
 
 function printHelp() {
   console.log(`Usage:
-  node e2e/stress/backend/compare.mjs BASELINE_SUMMARY_OR_DIR CANDIDATE_SUMMARY_OR_DIR
+  node e2e/common/stress/backend/compare.mjs BASELINE_SUMMARY_OR_DIR CANDIDATE_SUMMARY_OR_DIR
 
 Examples:
-  node e2e/stress/backend/compare.mjs .e2e-artifacts/stress/backend/server-events-read-old .e2e-artifacts/stress/backend/server-events-read-new
-  node e2e/stress/backend/compare.mjs baseline/summary.json candidate/summary.json`);
+  node e2e/common/stress/backend/compare.mjs .e2e-artifacts/stress/backend/server-events-read-old .e2e-artifacts/stress/backend/server-events-read-new
+  node e2e/common/stress/backend/compare.mjs baseline/summary.json candidate/summary.json`);
 }
