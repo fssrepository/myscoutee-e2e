@@ -1,6 +1,6 @@
 {
   "name": "@fssrepository/myscoutee-e2e",
-  "version": "1.0.0",
+  "version": "1.4.6",
   "description": "Shared native MyScoutee E2E helpers and stress engines.",
   "type": "module",
   "license": "AGPL-3.0-only",

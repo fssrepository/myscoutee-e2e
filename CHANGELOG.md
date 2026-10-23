@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 — 2026-10-23
+## 1.4.6 — 2026-10-23
 
 - Release shared native E2E helpers and stress engines as
   `@fssrepository/myscoutee-e2e` on GitHub Packages.
