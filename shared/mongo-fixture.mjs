@@ -35,7 +35,7 @@ export async function runE2eMongo(ctx, evalScript, { repoRoot }) {
     // The owned lab helper validates the namespace and permits its DEMO DB only.
     // Send fixture code through stdin, never credentials or a second DB server.
     const { spawn } = await import('node:child_process');
-    const helper = fileURLToPath(new URL('microservices/tools/e2e-mongo.py', pathToFileURL(`${repoRoot}/`)));
+    const helper = fileURLToPath(new URL('tools/microservices/e2e-mongo.py', pathToFileURL(`${repoRoot}/`)));
     return new Promise((resolve, reject) => {
       const child = spawn('python3', [helper, '--database', dbName], {
         timeout: Number(process.env.E2E_FIXTURE_TIMEOUT_MS ?? 30000),

@@ -18,7 +18,7 @@ test('KVM fixtures use the supplied application helper and send the script throu
       const repoRoot = path.join(directory, application);
       const expression = 'db.session.countDocuments({})';
       const result = await queryE2eMongo({ vars: { e2eDatabase: 'demo_db' } }, expression, { repoRoot });
-      assert.deepEqual(result.args, [path.join(repoRoot, 'microservices/tools/e2e-mongo.py'), '--database', 'demo_db']);
+      assert.deepEqual(result.args, [path.join(repoRoot, 'tools/microservices/e2e-mongo.py'), '--database', 'demo_db']);
       assert.equal(result.input, `print(EJSON.stringify((${expression}), { relaxed: true }));`);
     }
   } finally {
