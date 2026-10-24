@@ -1,0 +1,15 @@
+# Changelog
+
+## 1.4.7-dev.1 — local extraction staging
+
+- Use the canonical microservices Mongo fixture helper with explicit consumer context.
+- Preserve DEMO-only validation and stdin fixture transport.
+
+## 1.4.6 — 2026-10-23
+
+- Release shared native E2E helpers and stress engines as
+  `@fssrepository/myscoutee-e2e` on GitHub Packages.
+- Define public module exports and the `myscoutee-e2e-compare` command.
+- Publish from matching version tags after helper and installed-package checks.
+- Preserve application-owned fixture paths, including the relocated
+  `tools/microservices/e2e-mongo.py` KVM transport.

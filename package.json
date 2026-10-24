@@ -1,0 +1,47 @@
+{
+  "name": "@fssrepository/myscoutee-e2e",
+  "version": "1.5.0",
+  "description": "Shared native MyScoutee E2E helpers and stress engines.",
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fssrepository/myscoutee-e2e.git"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    "./shared/assertions.mjs": "./shared/assertions.mjs",
+    "./shared/collection-runner.mjs": "./shared/collection-runner.mjs",
+    "./shared/http.mjs": "./shared/http.mjs",
+    "./shared/mongo-fixture.mjs": "./shared/mongo-fixture.mjs",
+    "./shared/native-demo-sessions.mjs": "./shared/native-demo-sessions.mjs",
+    "./shared/websocket.mjs": "./shared/websocket.mjs",
+    "./functional/ui/lib/chrome-cdp.mjs": "./functional/ui/lib/chrome-cdp.mjs",
+    "./functional/ui/lib/ui-contracts.mjs": "./functional/ui/lib/ui-contracts.mjs",
+    "./stress/backend/run.mjs": "./stress/backend/run.mjs",
+    "./stress/backend/ramp.mjs": "./stress/backend/ramp.mjs",
+    "./stress/ui/run.mjs": "./stress/ui/run.mjs"
+  },
+  "bin": {
+    "myscoutee-e2e-compare": "./stress/backend/compare.mjs"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "shared/*.mjs",
+    "shared/mongo-fixture-ssh.sh",
+    "functional/ui/lib/*.mjs",
+    "stress/backend/*.mjs",
+    "stress/ui/*.mjs",
+    "!**/*.test.mjs"
+  ],
+  "scripts": {
+    "test": "node --test shared/*.test.mjs functional/ui/lib/*.test.mjs stress/*.test.mjs",
+    "test:package": "node --test test/package.test.mjs",
+    "prepublishOnly": "npm test && npm run test:package"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
